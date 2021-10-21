@@ -52,9 +52,6 @@ aprox_derivative_loss_functions = inner_loss_functions[9:end]
 
 cb = function (p,l)
     println("loss: ", l )
-    println("pde_losses: ", map(l_ -> l_(p), pde_inner_loss_functions))
-    println("bcs_losses: ", map(l_ -> l_(p), bcs_inner_loss_functions))
-    println("der_losses: ", map(l_ -> l_(p), aprox_derivative_loss_functions))
     return false
 end
 
